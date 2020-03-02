@@ -5,18 +5,19 @@ import SEO from "../components/seo"
 import Header from "../components/Globals/Header";
 import Menu from "../components/Home/JobsMenu"
 
-//We are passing the graphql query data as a prop into our function in order for us to utilize its functionality as 
-//a function arguement
+//We are passing the graphql query data as a prop into our function
 const JobsPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <Header backgroundImage={data.jobsBackgroundImage.childImageSharp.fluid} title="Latest Jobs" styleClass="restPages-background" />
+    <Header backgroundImage={data.jobsBackgroundImage.childImageSharp.fluid} 
+            title="Latest Jobs" 
+            styleClass="restPages-background" 
+    />
     <Menu items={data.jobsMenu} />
   </Layout>
 );
-/*Remeber the Header is a component and we can pass data to that component (regardless of being a function or a class)
-that will be props. Here in particular we are passing the jobsBackgroundImage itselt (look graphql query below) but also a few attributes that will
-help us style this component with css*/
+/*We are passing the necessary props for the Header class to work. These include both grapgql queries and 
+styling attributes. Remember these are represanted as props!!*/
 
 export const Jobsquery = graphql`
 {
@@ -54,6 +55,6 @@ export const Jobsquery = graphql`
       }
     }
   }
-}`;
+}`
 
 export default JobsPage;

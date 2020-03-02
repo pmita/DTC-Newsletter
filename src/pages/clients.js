@@ -7,7 +7,10 @@ import Menu from "../components/Home/ClientsMenu"
 const ClientsPage = ({data}) => (
   <Layout>
     <SEO title="Clients" />
-    <Header backgroundImage={data.clientBackgroundImage.childImageSharp.fluid} title="Current Clients" styleClass="restPages-background" />
+    <Header backgroundImage={data.clientBackgroundImage.childImageSharp.fluid} 
+            title="Current Clients" 
+            styleClass="restPages-background" 
+    />
 
     <Menu items={data.clientsMenu} />
   </Layout>
@@ -36,6 +39,6 @@ export const backgroundEventsquery = graphql`
       }
     }
   }
-}`;
+}`
 
 export default ClientsPage

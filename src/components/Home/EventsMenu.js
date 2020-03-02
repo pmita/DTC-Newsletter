@@ -21,6 +21,7 @@ export default class EventsMenu extends Component {
           categories: getCategories(props.items.edges)
         };
       }
+
       handleItems = category => {
         let tempItems = [...this.state.items];
         if (category === "all") {
@@ -39,6 +40,8 @@ export default class EventsMenu extends Component {
         if (this.state.items.length > 0) {
           return (
             <section className="menu py-3">
+
+      {/*Beginning of Events filtering buttons */}
               <div className="container">
                 <Title title="This month's events" />
                 <div className="row mb-5">
@@ -59,8 +62,11 @@ export default class EventsMenu extends Component {
                     })}
                   </div>
                 </div>
-                </div>
-                <div className="container-fluid">
+              </div>
+      {/*End of Events filtering buttons */} 
+
+      {/*Beginning of Events postings grid */} 
+              <div className="container-fluid">
                   <div className="row">
                   {this.state.eventItems.map(({ node }) => {
                     return (
@@ -73,18 +79,19 @@ export default class EventsMenu extends Component {
                                 <div className="col-lg-12 col-md-12 col-sm-10">
                                     <Img fluid={node.eventImage.fluid} />
                                 </div>
+
                                 <div className="col-lg-12 col-md-12 col-sm-10 my-3">
-                                      <h6 >{node.eventTitle} - <span className="highlighted-text   mb-0">{node.eventPrice}</span></h6>
+                                      <h6 >{node.eventTitle} - <span className="highlighted-text mb-0">{node.eventPrice}</span></h6>
                                       <h6 className="my-3 text-center">{node.eventMajorDescription.eventMajorDescription}</h6>
                                       <h6 className="my-3 text-center">{node.eventMinorDescription}</h6>
                                 </div>
                             </div>
-
                           </div>
                     );
                   })}
                   </div>
               </div>
+      {/*End of Events postings grid*/} 
             </section>
           );
         } else {
@@ -102,4 +109,4 @@ export default class EventsMenu extends Component {
           );
         }
       }
-}
+    }

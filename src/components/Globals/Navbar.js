@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'gatsby'
 
-export default class Navbar extends Component {
-/*We are initiating Link state variable that will be holding all the data necessary for the
-navigation menu to work properly. That includes Link togglable boolean, css attributes as well 
-as an array of links for eavh page */    
+export default class Navbar extends Component {   
     state = {
         navbarOpen: false,
         css: 'collapse navbar-collapse',
@@ -26,7 +23,6 @@ as an array of links for eavh page */
         return (
             <nav className="navbar navbar-dark navbar-expand-md navbar-no-bg">
                 <div className="container">
-
                     <Link to="/" className="navbar-brand">
                         <h1 className="logo-header">Newsletter</h1>
                     </Link>
@@ -40,7 +36,6 @@ as an array of links for eavh page */
                                 <span className="navbar-toggler-icon"></span>
                     </button>
 
-
                     <div className={this.state.css} id="navbarNav">
                         <ul className="navbar-nav text-center ml-auto">
                             <li className="nav-item"><Link className="nav-link scroll-link" to="/">Home</Link></li>
@@ -49,7 +44,6 @@ as an array of links for eavh page */
                             <li className="nav-item"><Link className="nav-link scroll-link" to="/clients">Clients</Link></li>
                         </ul>
                     </div>
-
                 </div>
             </nav>
         );

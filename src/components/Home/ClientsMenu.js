@@ -32,19 +32,18 @@ export default class ClientsMenu extends Component {
                                     <div className="col-lg-10 col-md-10 col-sm-12 mx-auto ">
                                         <h4 className="highlighted-text my-3">{node.clientTitle}</h4>
                                         <p className="my-3 text-justify">{node.majorUpdate.majorUpdate}</p>
-                                            {/*We introduce a react component to do the toggling of our show more section. Please note that we are appsing the description
-                                            as a prop to our HideButton component*/}
-                                        <HideButton paragraphOne={node.majorUpdate.majorUpdate} paragraphTwo={node.minorUpdate.minorUpdate}/>
+                                        <HideButton paragraphOne={node.majorUpdate.majorUpdate} 
+                                                    paragraphTwo={node.minorUpdate.minorUpdate}
+                                        />
                                     </div>
                                 </div>
-
                             </div>
                             );
                         })}
                         </div>
                     </div>
                 </section>
-            )
+            );
         }else {
             return (
               <section className="menu py-5">
@@ -58,6 +57,6 @@ export default class ClientsMenu extends Component {
                 </div>
               </section>
             );
-          }
+        }
     }
 }

@@ -7,7 +7,11 @@ import Menu from "../components/Home/EventsMenu"
 const EventsPage = ({data}) => (
   <Layout>
     <SEO title="Events" />
-    <Header backgroundImage={data.eventsBackgroundimage.childImageSharp.fluid} title="Current Events" styleClass="restPages-background" />
+    <Header backgroundImage={data.eventsBackgroundimage.childImageSharp.fluid} 
+            title="Current Events" 
+            styleClass="restPages-background" 
+    />
+
     <Menu items={data.eventsMenu} />
   </Layout>
 );
@@ -40,6 +44,6 @@ export const Eventsquery = graphql`
       }
     }
   }
-}`;
+}`
 
 export default EventsPage
