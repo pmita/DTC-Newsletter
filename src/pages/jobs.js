@@ -55,6 +55,6 @@ export const Jobsquery = graphql`
       }
     }
   }
-}`
+}`;
 
 export default JobsPage;
