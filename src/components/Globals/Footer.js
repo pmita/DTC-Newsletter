@@ -5,8 +5,8 @@ export default function Footer() {
         <footer className="footer">
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-10 mx-auto my-auto footer-text text-center text-capitalize">
-                        <p>&copy; Copyright {new Date().getFullYear().toString()} DTC - All rights reserved </p>
+                    <div className="col-10 mx-auto footer-text text-center">
+                        <p>&copy; {new Date().getFullYear().toString()} DXC Technology Company. All rights reserved </p>
                     </div>
                 </div>
             </div>

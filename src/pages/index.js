@@ -14,8 +14,8 @@ const IndexPage = ({data}) => (
 
     <section className="menu my-3">
         <h1 className="text-center text-uppercase">DTC updates</h1>
-        <p className="container my-4 text-justify">{data.indexBriefDescription.edges[0].node.majorUpdate.majorUpdate}</p>
-        <p className="container my-4 secondary-text">{data.indexBriefDescription.edges[0].node.minorUpdate}</p>
+        <p className="container my-4">{data.indexBriefDescription.edges[0].node.majorUpdate.majorUpdate}</p>
+        <p className="container my-4">{data.indexBriefDescription.edges[0].node.minorUpdate}</p>
         <Carousel backgroundImageOne={data.carouselBackgroundImageOne.childImageSharp.fluid} 
                   backgroundImageTwo={data.carouselBackgroundImageTwo.childImageSharp.fluid}
                   backgroundImageThree={data.carouselBackgroundImageThree.childImageSharp.fluid}

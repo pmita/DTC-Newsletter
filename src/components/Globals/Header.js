@@ -9,7 +9,7 @@ export default function Header({backgroundImage,
         <BackgroundImage className={styleClass} 
                          fluid={backgroundImage}
         >
-            <h1 className="title text-uppercase text-center display-4 font-weight-bold">
+            <h1 className="title text-uppercase text-center display-6 font-weight-bold">
                 {title}
             </h1>
             {children}

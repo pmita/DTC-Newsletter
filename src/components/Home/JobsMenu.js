@@ -86,7 +86,7 @@ export default class JobsMenu extends Component {
                         <div className="col-lg-10 col-md-10 col-sm-12 mx-auto ">
                               <h4 className="my-3">{node.jobTitle}</h4>
                               <p className="my-3 text-justify">{node.jobDescription.jobDescription}</p>
-                              <p className="my-3 text-justify">Responsibilities: {node.jobResponsibilities.jobResponsibilities}</p>
+                              <p className="my-3 text-justify">{node.jobResponsibilities.jobResponsibilities}</p>
 
                                 {/*We introduce a react component to do the toggling of our show more section. Please note that we are appsing the description
                                   as a prop to our HideButton component*/}
