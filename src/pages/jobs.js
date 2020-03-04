@@ -31,7 +31,7 @@ export const Jobsquery = graphql`
   jobsMenu: allContentfulJobItem{
     edges{
       node{
-				id
+	id
         jobTitle
         jobCategory
         jobDescription{
