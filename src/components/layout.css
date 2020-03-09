@@ -100,7 +100,6 @@ p{
 /* End of navigation menu*/
 
 /* Banner each of the pages*/
-
 .default-background, .restPages-background{
   min-height:100vh;
   display:flex;
@@ -115,11 +114,8 @@ p{
 .restPages-background{
   min-height:70vh;
 }
-
 /*End of Banners section*/
-.secondary-text{
-  color:rgba(0,0,0,0.5);
-}
+
 /*Filter buttons styling*/
 .btn-yellow{
   color:#000000;
@@ -141,6 +137,10 @@ p{
 .carousel-control-prev{
   background-color:rgba(0,0,0,0.2);
 }
+
+.fixed-width-carousel{
+  height:500px;
+}
 /*End of carousel section*/
 
 /*Beginning of Footer section*/
@@ -154,6 +154,18 @@ p{
   font-size:0.9rem;
 }
 
+.socials{
+  width:3em;
+  height:3em;
+}
+
+.footer-text-white, .footer a:hover, .footer .socials:hover{
+  color:#ffffff;
+}
+
+.footer a:hover{
+  text-decoration:underline;
+}
 /*End of Footer section */
 
 .semi-transparent-background{

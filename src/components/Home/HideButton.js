@@ -28,7 +28,7 @@ export default class HideButton extends Component {
             <div>
                 {this.state.isOn && (<>
                                         <p className="my-3 text-justify">{this.state.paragraphOne}</p>
-                                        <p className="my-3 secondary-text text-justify">{this.state.paragraphTwo}</p>
+                                        <p className="my-3 text-justify">{this.state.paragraphTwo}</p>
                                      </>)}
                 <button className="btn btn-yellow text-capitalize m-3" onClick={this.toggleButton}>{this.state.text}</button>
             </div>

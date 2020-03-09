@@ -9,7 +9,7 @@ export default function ReactCarousel({backgroundImageOne,
                                        descriptionTwo, 
                                        descriptionThree}) {
     return (
-        <Carousel className="container my-3 ">
+        <Carousel className="container my-3">
 
           <Carousel.Item className="row">
               <div className="col-lg-12 col-md-12 col-sm-10 text-center">

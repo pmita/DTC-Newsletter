@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import HideButton from "./HideButton"
+import HideButton from "./HideButton_ClientPage"
 import Title from "../Globals/Title"
 
 export default class ClientsMenu extends Component {
@@ -32,8 +32,7 @@ export default class ClientsMenu extends Component {
                                     <div className="col-lg-10 col-md-10 col-sm-12 mx-auto ">
                                         <h4 className="highlighted-text my-3">{node.clientTitle}</h4>
                                         <p className="my-3 text-justify">{node.majorUpdate.majorUpdate}</p>
-                                        <HideButton paragraphOne={node.majorUpdate.majorUpdate} 
-                                                    paragraphTwo={node.minorUpdate.minorUpdate}
+                                        <HideButton paragraphOne={node.minorUpdate.minorUpdate} 
                                         />
                                     </div>
                                 </div>
