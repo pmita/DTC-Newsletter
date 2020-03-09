@@ -77,7 +77,7 @@ export default class EventsMenu extends Component {
                             
                             <div className="row mx-auto text-center">
                                 <div className="col-lg-12 col-md-12 col-sm-10">
-                                    <Img fixed={node.eventImage.fixed} />
+                                    <Img fluid1={node.eventImage.fluid} />
                                 </div>
 
                                 <div className="col-lg-12 col-md-12 col-sm-10 my-3">
