@@ -37,8 +37,8 @@ export const Eventsquery = graphql`
         eventMinorDescription
         eventPrice
         eventImage{
-          fixed(width:300, height:300){
-            ...GatsbyContentfulFixed_tracedSVG
+          fluid(maxHeight:300){
+            ...GatsbyContentfulFluid_tracedSVG
           }
         }
       }
