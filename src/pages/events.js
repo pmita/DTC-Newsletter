@@ -37,7 +37,7 @@ export const Eventsquery = graphql`
         eventMinorDescription
         eventPrice
         eventImage{
-          fluid(quality:100){
+          fluid(maxHeight:300){
             ...GatsbyContentfulFluid_tracedSVG
           }
         }
