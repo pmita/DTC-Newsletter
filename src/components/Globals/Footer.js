@@ -11,10 +11,10 @@ export default function Footer() {
                         <p>&copy; {new Date().getFullYear().toString()} DXC Technology Company. All rights reserved </p>
                     </div>
                     <div className="col-lg-6 col-sm-12 text-center">
-                        <a href="https://www.google.com"><FaLinkedin className="footer-text socials"/></a>
-                        <a href="https://www.google.com"><FaFacebook className="footer-text socials"/></a>
-                        <a href="https://www.google.com"><FaTwitter className="footer-text socials"/></a>
-                        <a href="https://www.google.com"><FaInstagram className="footer-text socials"/></a>
+                        <a href="https://www.linkedin.com/company/dxctechnology/" rel="noopener noreferrer" target="_blank"><FaLinkedin className="footer-text socials"/></a>
+                        <a href="https://www.facebook.com/DXCTechnology/" rel="noopener noreferrer" target="_blank"><FaFacebook className="footer-text socials"/></a>
+                        <a href="https://www.twitter.com/DXCTechnology?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" rel="noopener noreferrer" target="_blank"><FaTwitter className="footer-text socials"/></a>
+                        <a href="https://www.instagram.com/dxctechnologyuki/?hl=en" rel="noopener noreferrer" target="_blank"><FaInstagram className="footer-text socials"/></a>
                     </div> 
                 </div>
 

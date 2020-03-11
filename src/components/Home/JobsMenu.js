@@ -94,7 +94,11 @@ export default class JobsMenu extends Component {
                                           paragraphTwo={node.jobEssentials.jobEssentials}
                               />
 
-                              <button className="btn btn-yellow text-capitalize m-3">Apply</button>
+                              <a href={node.jobLink} 
+                                 rel="noopener noreferrer" 
+                                 target="_blank">
+                                    <button className="btn btn-yellow text-capitalize m-3">Apply</button>
+                              </a>
                         </div>
                     </div>
                   </div>

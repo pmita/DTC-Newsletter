@@ -38,6 +38,7 @@ export default class EventsMenu extends Component {
 
       render() {
         if (this.state.items.length > 0) {
+          console.log(this.state.eventItems[0].node.eventMajorDescription2.eventMajorDescription2);
           return (
             <section className="menu py-3">
 

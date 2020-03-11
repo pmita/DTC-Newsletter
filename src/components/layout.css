@@ -26,6 +26,7 @@ h1,h2,h3,h4,h5,h6,button {
 p{
   font-family: 'GT Walsheim Regular',Arial;
 }
+
 /* Newsletter header*/
 .logo-header{
   color:#000000;
@@ -139,8 +140,9 @@ p{
 }
 
 .fixed-width-carousel{
-  height:500px;
+  width:100%;
 }
+
 /*End of carousel section*/
 
 /*Beginning of Footer section*/
@@ -183,6 +185,16 @@ p{
     width:100%;
     min-height:100%;
     font-size:0.75rem;
+  }
+
+  .fixed-width-carousel{
+    width:100%;
+  }
+}
+
+@media only screen and (max-width: 532px) {
+  .fixed-width-carousel{
+    margin-left:0.5%;
   }
 }
 
