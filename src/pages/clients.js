@@ -34,9 +34,6 @@ export const backgroundEventsquery = graphql`
         majorUpdate {
           majorUpdate
         }
-        minorUpdate {
-          minorUpdate
-        }
       }
     }
   }

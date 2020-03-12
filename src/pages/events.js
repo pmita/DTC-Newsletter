@@ -35,17 +35,6 @@ export const Eventsquery = graphql`
         eventMajorDescription{
           eventMajorDescription
         }
-        eventMajorDescription2{
-          eventMajorDescription2
-          json
-        }
-        eventMinorDescription
-        eventPrice
-        eventImage{
-          fluid(maxHeight:300){
-            ...GatsbyContentfulFluid_tracedSVG
-          }
-        }
       }
     }
   }

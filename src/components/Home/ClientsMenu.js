@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import HideButton from "./HideButton_ClientPage"
 import Title from "../Globals/Title"
+import ReactMarkdown from 'react-markdown';
 
 export default class ClientsMenu extends Component {
     constructor(props) {
@@ -25,15 +25,13 @@ export default class ClientsMenu extends Component {
                             return (
                             <div
                                 key={node.id}
-                                className="container col-lg-4 col-md-6 col-sm-12 my-2 float-left"
+                                className="container col-lg-6 col-md-6 col-sm-12 my-2 float-left"
                             >
 
                                 <div className="row my-3 text-center">
                                     <div className="col-lg-10 col-md-10 col-sm-12 mx-auto ">
                                         <h4 className="highlighted-text my-3">{node.clientTitle}</h4>
-                                        <p className="my-3 text-justify">{node.majorUpdate.majorUpdate}</p>
-                                        <HideButton paragraphOne={node.minorUpdate.minorUpdate} 
-                                        />
+                                        <ReactMarkdown source={node.majorUpdate.majorUpdate} />
                                     </div>
                                 </div>
                             </div>

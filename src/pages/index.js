@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/Globals/Header"
 import Carousel from "../components/Home/ReactCarousel"
+import ReactMarkdown from "react-markdown"
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -15,8 +16,7 @@ const IndexPage = ({data}) => (
 
     <section className="menu my-3">
         <h1 className="text-center text-uppercase">DTC updates</h1>
-        <p className="container my-4">{data.indexBriefDescription.edges[0].node.majorUpdate.majorUpdate}</p>
-        <p className="container my-4">{data.indexBriefDescription.edges[0].node.minorUpdate}</p>
+        <ReactMarkdown className="container my-4" source={data.indexBriefDescription.edges[0].node.majorUpdate.majorUpdate} />
         <Carousel backgroundImageOne={data.carouselBackgroundImageOne.childImageSharp.fluid} 
                   backgroundImageTwo={data.carouselBackgroundImageTwo.childImageSharp.fluid}
                   backgroundImageThree={data.carouselBackgroundImageThree.childImageSharp.fluid}
@@ -90,7 +90,6 @@ export const query = graphql`
         majorUpdate{
           majorUpdate
         }
-        minorUpdate
       }
     }
   }

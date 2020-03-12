@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Title from "../Globals/Title";
 import Img from "gatsby-image";
 import HideButton from "./HideButton";
+import ReactMarkdown from 'react-markdown';
 
 const getCategories = items => {
   let tempItems = items.map(item => {
@@ -76,17 +77,16 @@ export default class JobsMenu extends Component {
                 return (
                   <div
                     key={node.id}
-                    className="container col-lg-4 col-md-6 col-sm-12 my-2 float-left"
+                    className="container col-lg-6 col-md-6 col-sm-12 my-2 float-left"
                   >
                     <div className="row my-3 text-center">
                         <div className="col-lg-12 col-md-12 col-sm-12  ">
                             <Img fixed={node.jobImage.fixed} />
                         </div>
 
-                        <div className="col-lg-10 col-md-10 col-sm-12 mx-auto ">
+                        <div className="col-lg-10 col-md-10 col-sm-12 mx-auto">
                               <h4 className="my-3">{node.jobTitle}</h4>
-                              <p className="my-3 text-justify">{node.jobDescription.jobDescription}</p>
-                              <p className="my-3 text-justify">{node.jobResponsibilities.jobResponsibilities}</p>
+                              <ReactMarkdown className="text-justify" source={node.jobDescription.jobDescription} />
 
                                 {/*We introduce a react component to do the toggling of our show more section. Please note that we are appsing the description
                                   as a prop to our HideButton component*/}

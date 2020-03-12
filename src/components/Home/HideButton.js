@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 export default class HideButton extends Component {
     constructor(props) {
@@ -27,8 +28,8 @@ export default class HideButton extends Component {
         return (
             <div>
                 {this.state.isOn && (<>
-                                        <p className="my-3 text-justify">{this.state.paragraphOne}</p>
-                                        <p className="my-3 text-justify">{this.state.paragraphTwo}</p>
+                                        <ReactMarkdown className="text-justify" source={this.state.paragraphOne} />
+                                        <ReactMarkdown className="text-justify" source={this.state.paragraphTwo} />
                                      </>)}
                 <button className="btn btn-yellow text-capitalize m-3" onClick={this.toggleButton}>{this.state.text}</button>
             </div>

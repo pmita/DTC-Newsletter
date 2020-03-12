@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Title from "../Globals/Title";
-import Img from "gatsby-image";
+import ReactMarkdown from 'react-markdown';
 
 const getCategories = items => {
     let tempItems = items.map(item => {
@@ -38,7 +38,6 @@ export default class EventsMenu extends Component {
 
       render() {
         if (this.state.items.length > 0) {
-          console.log(this.state.eventItems[0].node.eventMajorDescription2.eventMajorDescription2);
           return (
             <section className="menu py-3">
 
@@ -73,20 +72,19 @@ export default class EventsMenu extends Component {
                     return (
                           <div
                             key={node.id}
-                            className="container col-lg-4 col-md-6 col-sm-12 my-2 float-left"
+                            className="container col-lg-10 col-md-12 col-sm-12 my-2 float-left"
                           >
                             
                             <div className="row mx-auto text-center">
-                                <div className="col-lg-12 col-md-12 col-sm-10">
-                                    <Img fluid={node.eventImage.fluid}/>
-                                </div>
-
+                                
                                 <div className="col-lg-12 col-md-12 col-sm-10 my-3">
-                                      <h6 >{node.eventTitle} - <span className="highlighted-text mb-0">{node.eventPrice}</span></h6>
-                                      <p className="my-3 text-center">{node.eventMajorDescription.eventMajorDescription}</p>
-                                      <p className="my-3 text-center">{node.eventMinorDescription}</p>
+                                      <h6 >{node.eventTitle}</h6>
+                                      <ReactMarkdown source={node.eventMajorDescription.eventMajorDescription} />                      
                                 </div>
                             </div>
+
+                            <hr />
+                            
                           </div>
                     );
                   })}

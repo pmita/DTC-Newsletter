@@ -37,9 +37,6 @@ export const Jobsquery = graphql`
         jobDescription{
           jobDescription
         }
-        jobResponsibilities{
-          jobResponsibilities
-        }
         jobRequirements{
           jobRequirements
         }
